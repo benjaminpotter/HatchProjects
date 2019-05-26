@@ -50,7 +50,6 @@ def keyPressed():
         if key == ENTER:
             randomize_circles()
             has_set_difficulty = True
-            print(has_set_difficulty)
 
 def draw():
     global difficulty

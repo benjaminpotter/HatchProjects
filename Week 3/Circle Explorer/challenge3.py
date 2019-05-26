@@ -36,7 +36,6 @@ def check_green_circle():
 def check_red_circles():
     global circle_pos, lives, cooldown
     
-    print('c: ' + str(cooldown))
     if cooldown < 0:
         for i in range(len(circle_pos) / 2):
             if dist(circle_pos[i], circle_pos[i + 1], mouseX, mouseY) < 10:
@@ -45,7 +44,6 @@ def check_red_circles():
                     cooldown = 30
                 else:
                     background(255, 0, 0)
-                    print(lives)
                     noLoop()
                     
 def draw_lives():
@@ -69,7 +67,6 @@ def keyPressed():
         if key == ENTER:
             randomize_circles()
             has_set_difficulty = True
-            print(has_set_difficulty)
 
 def draw():
     global difficulty, cooldown
