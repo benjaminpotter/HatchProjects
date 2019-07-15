@@ -10,7 +10,7 @@ def draw():
     fill(255, 255, 0)
     pac_mouth_close = 360 - pac_mouth
     arc(200, 200, 80, 80, pac_mouth, pac_mouth_close)
-    if pac_mouth >= 45 || pac_mouth <= 0 :
+    if pac_mouth >= 45 or pac_mouth <= 0 :
         chomp_speed *= -1
 
 pac_mouth += chomp_speed
