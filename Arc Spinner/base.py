@@ -26,7 +26,7 @@ def spinArcs():
          angles1 += 1
 def checkWin():
     if numClicks > 2 :
-        if abs(angles1%360 - angles2%360) < 30 && abs(angles2%360 - angles3%360) < 30:
+        if abs(angles1%360 - angles2%360) < 30 and abs(angles2%360 - angles3%360) < 30:
             background (0, 255, 0)
         else:
             background (255, 0, 0)
