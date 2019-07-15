@@ -7,7 +7,7 @@ def drawArcs() :
     stroke(0, 255, 255)
     strokeCap(SQUARE)
     strokeWeight(20)
-    \start1 = 110 + angles1
+    start1 = 110 + angles1
     var start2 = 110 + angles2
     var start3 = 110 + angles3
     var end1 = 430 + angles1
@@ -33,10 +33,8 @@ def checkWin():
             
 def mouseClicked() :
     numClicks + 1
-};
 def draw() :
     background(0, 0, 0)
     spinArcs()
     checkWin()
     drawArcs()
-}
