@@ -1,0 +1,15 @@
+def setup():
+	size(400, 400)
+background(49, 4, 56)
+fill(103, 219, 209)
+triangle(250, 340, 90, 200, 50, 300)
+
+fill(253, 255, 188)
+noStroke()
+beginShape()
+curveVertex(250, 250)
+curveVertex(300, 300)
+curveVertex(250, 350)
+curveVertex(200, 300)
+endShape(CLOSE)
+triangle(251, 90, 200, 300, 300, 300)
