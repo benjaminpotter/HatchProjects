@@ -32,4 +32,3 @@ def keyPressed():
   image(head, 200, 125, 170, 170)
   image(body, 200, 290, 170, 170)
   displayInstruction()
- 
