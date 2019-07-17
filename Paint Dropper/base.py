@@ -1,29 +1,25 @@
-def setup():
-    size(400, 400)
-    
-class Drop:
-    def __init__(self):
-        self.radius = 5
-        self.colour = color(random(255), random(255), random(255))
-        
-    def draw_self(self):
-        fill(self.colour)
-        ellipse(200, 200, self.radius, self.radius)
-        
-drops = []
+atLeastOneCircle = FALSE
+lastX = 0
+lastY = 0
+def recordLastLocation():
+  lastX = mouseX
+  lastY = mouseY
 
-def draw_drops():
-    global drops
-    
-    for d in drops:
-        d.radius += 1
-        d.draw_self()
-        
-def draw():
-    background(0)
-    noStroke()
-    draw_drops()
-    
-def mousePressed():
-    global drops
-    drops.append(Drop())
+def drawCircle():
+  var size = random(10, 50)
+  fill(random(0, 255), random(0, 255), random(0, 255))
+  ellipse(mouseX, mouseY, size, size)
+  recordLastLocation()
+  atLeastOneCircle = true
+
+def drawLine():
+  strokeWeight(random(1, 5))
+  stroke(random(0, 255), random(0, 255), random(0, 255))
+  line(lastX, lastY, mouseX, mouseY)
+
+def mouseClicked():
+  if atLeastOneCircle == TRUE :
+    drawLine()
+    drawCircle()
+  else :
+    drawCircle()
