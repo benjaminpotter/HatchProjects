@@ -1,31 +1,36 @@
-cowList = []
-cowImage = getImage("minecraft/cow")
-imageMode(CENTER,CENTER)
-def cow():
-  this.yPos = random(100,350)
-  this.xPos = 400
-  this.speed = 10
-  this.rotation = 2
-  this.isRolling = FALSE
-
-def drawBackground() :
-  background(198, 255, 246)
+def drawBackground():
   noStroke()
-  fill(132, 196, 98)
-  rect(0,130,400,400)
+  background(201, 233, 239)
+  fill(135, 229, 177)
+  rect(0,350,400,100)
+  ellipse(30,370,200,200)
+  ellipse(90,400,250,200)
+drawBackground()
+def drawCastle():
+  fill(196, 196, 196)
+  rect(290,80,100,340)
+  fill(100)
+  rect(315,120,50,50)
+  triangle(342,20,270,90,410,90)
+drawCastle()
 
-def moveCow():
-  for i in range(0, cowList.length) :
-    cowList[i].xPos -= cowList[i].speed
-    cowList[i].rotation -= 5
-    translate(cowList[i].xPos, cowList[i].yPos)
-    rotate(cowList[i].rotation)
-    image(cowImage,0, 0)
-    resetMatrix()
+def drawHair():
+  fill(255, 248, 214)
+  rect(335,130,10,400,10) 
+  rect(337,130,10,230,10)
+  rect(339,130,10,200,10)
+  ellipse(332,135,32,22)
 
-def draw():
-  drawBackground()
-  moveCow()
-
-def mouseClicked():
-  cowList.append(new cow())
+def drawRapunzel():
+  fill(255, 248, 214)
+  rect(315,130,10,400,10)
+  fill(226, 203, 242)
+  ellipse(330,170,20,50)
+  fill(247, 232, 200)
+  ellipse(330,140,30,30)
+  ellipse(330,170,10,10)
+  ellipse(320,170,10,10)
+  fill(196, 196, 196)
+  rect(290,170,100,340)
+  drawHair()
+drawRapunzel()
