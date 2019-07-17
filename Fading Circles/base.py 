@@ -1,0 +1,49 @@
+fade = get()
+trial = 0
+x = 0
+y = 0
+lastX = 0
+lastY = 0
+circleSize = 0
+speed = 5
+
+def drawLines():
+    if lastX == 0 and lastY == 0:
+        lastX = x
+        lastY = y
+    else:
+        noFill()
+        strokeWeight(2)
+        stroke(random(0, 255), random(0, 255), random(0, 255))
+        bezier(x, y, x + random(1, 10), x + random(1, 10),
+               y - random(1, 10), y - random(1, 10), lastX, lastY)
+        lastX = x
+        lastY = y
+
+def drawCircle():
+    x = random(0, 400)
+    y = random(0, 400)
+    circleSize = random(10, 50)
+    fill(random(0, 255), random(0, 255), random(0, 255))
+    noStroke()
+    ellipse(x, y, circleSize, circleSize)
+    drawLines()
+
+def randomCircle():
+    global trial
+
+    trial = random(0, speed)
+    roundedTrial = round(trial)
+    if roundedTrial == 1:
+        drawCircle()
+
+def fading():
+    fade = get()
+    background(0)
+    tint(255, 250)
+    image(fade)
+
+background(0)
+def draw():
+    fading()
+    randomCircle()
