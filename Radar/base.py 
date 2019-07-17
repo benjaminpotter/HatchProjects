@@ -1,0 +1,65 @@
+translate(200, 200)
+speed = 0.5
+radarColour = color(0, 255, 0)
+entityAr = []
+numberOfEntities = 50
+
+class Entity:
+
+    def __init__(self):
+        self.x = random(0, 400)
+        self.y = random(0, 400)
+        self.brightness = 0
+        self.xSpeed = random(-0.5, 0.5)
+        self.ySpeed = random(-0.5, 0.5)
+        self.size = random(5, 10)
+
+def createEntity():
+    for i in range(numOfEntities):
+        entityAr.append(new Entity())
+createEntity()
+
+def drawGrid():
+    for i in range(10):
+        strokeWeight(0.5)
+        stroke(radarColour, 20)
+        noFill()
+        ellipse(200, 200, 50 * i, 50 * i)
+    line(0, 200, 400, 200)
+    line(200, 0, 200, 400)
+    line(0, 0, 400, 400)
+    line(400, 0, 0, 400)
+
+def ping():
+    for i in range(len(entityAr)):
+        if get(entityAr[i].x, entityAr[i].y) == radarColour:
+            entityAr[i].brightness = 275
+        if entityAr[i].brightness < 0:
+            entityAr[i].x += entityAr[i].xSpeed
+            entityAr[i].y += entityAr[i].ySpeed
+        if entityAr[i].x > 400 or entityAr[i].y > 400 or entityAr[i].x < 0 or entityAr[i].y < 0:
+            entityAr.remove(i)
+            entityAr.append(new entity())
+    entityAr[i].brightness -= 5
+
+def drawEntity():
+    for i in range(len(entityAr)):
+        fill(radarColour, entityAr[i].brightness)
+        stroke(radarColour, 10)
+        ellipse(entityAr[i].x, entityAr[i].y, entityAr[i].size, entityAr[i].size)
+
+def drawRadar():
+    popMatrix()
+    fill(0, 15)
+    rect(-300, -300, 600, 600)
+    rotate(-speed)
+    stroke(radarColour)
+    strokeWeight(10)
+    line(0, 0, 200, 200)
+
+def draw():
+    resetMatrix()
+    drawGrid()
+    drawEntity()
+    drawRadar()
+    ping()
