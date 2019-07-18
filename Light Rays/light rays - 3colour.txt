@@ -1,0 +1,14 @@
+i = 0
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    background(0)
+def draw():
+    global i
+    if (i < 400):
+        i = i + 1
+        line(random(0,400),random(0,400),mouseX,mouseY)
+        if (mouseX < 201):
+            stroke(255,0,0)
+        elif (mouseX > 199):
+            stroke(0,0,255)

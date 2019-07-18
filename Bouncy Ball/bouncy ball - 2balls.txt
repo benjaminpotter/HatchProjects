@@ -1,0 +1,38 @@
+x=3
+y=3
+x1=3
+y1=3
+xpos = 40
+ypos = 40
+x1pos = 300
+y1pos = 100
+def setup():
+    size(600, 500)
+    colorMode(RGB)
+    noStroke()
+def draw():
+    global x,y,xpos,ypos,x1pos,y1pos,x1,y1
+    xpos = xpos+x
+    ypos = ypos+y
+    if xpos >= 575:
+        x = -3
+    elif xpos <= 25:
+        x = 3
+    elif ypos >= 475:
+        y = -3
+    elif ypos <= 25:
+        y = 3
+    x1pos = x1pos+x1
+    y1pos = y1pos+y1
+    if x1pos >= 575:
+        x1 = -3
+    elif x1pos <= 25:
+        x1 = 3
+    elif y1pos >= 475:
+        y1 = -3
+    elif y1pos <= 25:
+        y1 = 3
+    background(0,250,0)
+    fill(0,0,0)
+    ellipse(xpos,ypos,50,50)
+    ellipse(x1pos,y1pos,50,50)

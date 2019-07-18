@@ -1,0 +1,23 @@
+d = 1
+c = 0
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    background(255)
+    
+def draw():
+    global c,d
+    if c == 100:
+        d = -5
+    elif c == -100:
+        d = 5
+    background(255)
+    fill(194, 116, 0)
+    strokeWeight(5)
+    ellipse(200, 200 + c, 300, 300)
+    
+    noFill()
+    arc(200, 200 + c, 400, 180, 4.01426, 5.41052)
+    arc(200, 200 + c, 400, 180, 0.872665, 2.26893)
+    line(50, 200 + c, 350, 200 + c)
+    c = c + d

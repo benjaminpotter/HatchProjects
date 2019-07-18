@@ -1,0 +1,28 @@
+r=0
+g=0
+b=0
+def setup():
+    size(600, 600)
+    colorMode(RGB)
+    noStroke()
+    
+def draw():
+    global r,g,b
+    if (key == "r"):
+        r=255
+        g=0
+        b=0
+    elif(key == "g"):
+        r=0
+        g=255
+        b=0
+    elif(key == "b"):
+        r=0
+        g=0
+        b=255
+    elif(key == "y"):
+        r=170
+        g=255
+        b=0
+    fill(r,g,b)
+    ellipse(mouseX,mouseY,10,10)

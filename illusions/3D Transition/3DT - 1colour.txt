@@ -1,0 +1,15 @@
+i = 0
+s = 233
+a = 0
+
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    noStroke()
+    
+def draw():
+    global s,a
+    fill(a / 5, a, 0)
+    ellipse(200 + s / 10, 200 + s / 10, s, s)
+    s = s - 1
+    a = a + 1 

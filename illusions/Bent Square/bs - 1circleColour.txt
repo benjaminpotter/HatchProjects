@@ -1,0 +1,15 @@
+i = 0
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    noFill()
+    strokeWeight(2.5)
+def draw():
+    global i
+    if i < 20:
+        stroke(random(0,255),random(0,255),random(0,255))
+        ellipse(200, 200, i * 20, i * 20)
+        i = i + 1
+    translate(200, 0)
+    rotate(0.787)
+    rect(0, 0, 280, 280)

@@ -1,0 +1,23 @@
+
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    background(255)
+    
+def draw():
+    background (255)
+    fill(32)
+    ellipse(200, 200, 325, 325)
+    noStroke()
+    fill(255)
+    ellipse(152, 261, 92, 92)
+    ellipse(257, 157, 124, 124)
+    
+    stroke(255)
+    quad(156, 215, 200, 260, 270, 210, 201, 150)
+    stroke(32)
+    strokeWeight(10)
+    ellipse(152, 260, 60, 60)
+    ellipse(258, 157, 81, 81)
+    noStroke()
+    quad(33, 186, 41, 244, 148, 285, 155, 235)

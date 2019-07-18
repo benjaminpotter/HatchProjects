@@ -1,0 +1,16 @@
+
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    background(255)
+    
+def draw():
+    background(255)
+    fill(194, 116, 0)
+    strokeWeight(5)
+    ellipse(200, 200, 300, 300)
+    
+    noFill()
+    arc(200, 200, 400, 180, 4.01426, 5.41052)
+    arc(200, 200, 400, 180, 0.872665, 2.26893)
+    line(50, 200, 350, 200)

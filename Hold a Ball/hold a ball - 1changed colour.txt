@@ -1,0 +1,10 @@
+def setup():
+    size(600, 600)
+    colorMode(RGB)
+    noStroke()
+
+
+def draw():
+    background(200,50,50)
+    fill(10,250,100) # you can change the colour by switching the values in here 
+    ellipse(mouseX,mouseY,50,50)

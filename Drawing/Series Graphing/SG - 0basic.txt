@@ -1,0 +1,50 @@
+fib=[0, 1, 1,  2,  3,  5,  8, 13, 21,  34,  55,  89, 144, 233]
+tri=[1, 3, 6, 10, 15, 21, 28, 36, 45,  55,  66,  78,  91, 105]
+sqr=[1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196]
+i=0
+
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    noStroke()
+
+
+def draw():
+    global fib, tri, sqr, i, x
+    textAlign(RIGHT)
+    textSize(10)
+    fill(0)
+    stroke(0)
+    strokeWeight(3)
+    line(30, 370, 380, 370)
+    line(30, 20, 30, 370)
+    
+    text('v\na\nl\nu\ne', 8, 175)
+    text('cycle', 220, 390)
+    
+    strokeWeight(1)
+    while(i <= 350):
+        line(30, i + 20, 380, i + 20)
+        line(i + 30, 20, i + 30, 370)
+        text(i / 25, i + 33, 380)
+        text(350 - i, 29, i + 25)
+        i = i + 25
+
+    
+    def plot (seq, colour):
+        i = 80
+        stroke(colour)
+        last = seq[0]
+        x = 1
+        line(30, 370, 55, 370 - last)
+        while(i <= 380):
+            now = seq[x]
+            line(i - 25, 370 - last, i, 370 - now)
+            last = now
+            i = i + 25
+            x = x + 1
+            
+    strokeWeight(2);
+    plot(fib, color(255, 0, 0));
+    plot(tri, color(0, 255, 0));
+    plot(sqr, color(0, 0, 255));

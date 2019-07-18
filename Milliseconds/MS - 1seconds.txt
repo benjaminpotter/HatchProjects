@@ -1,0 +1,14 @@
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    noStroke()
+
+
+def draw():
+    background(255)
+    fill(255,153,0)
+    textSize(84)
+    text(second(),61,204)
+    fill(255,191,94)
+    textSize(26)
+    text("seconds",81,240)

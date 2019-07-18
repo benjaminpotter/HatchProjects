@@ -1,0 +1,29 @@
+x=3
+y=3
+xpos = 40
+ypos = 40
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    noStroke()
+
+
+def draw():
+    background(255)
+    global x,y,xpos,ypos
+    xpos = xpos+x
+    ypos = ypos+y
+    if xpos >= 175:
+        x = -3
+    elif xpos <= 15:
+        x = 3
+    elif ypos >= 355:
+        y = -3
+    elif ypos <= 65:
+        y = 3
+    fill(255,153,0)
+    textSize(84)
+    text(millis(),xpos,ypos)
+    fill(255,191,94)
+    textSize(26)
+    text("milliseconds",xpos+20,ypos+36)

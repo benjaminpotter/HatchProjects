@@ -1,0 +1,20 @@
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    noStroke()
+
+x = 0
+def draw():
+    global x
+    if mousePressed and x == 0:
+        x=1
+    elif mousePressed and x == 1:
+        x=0
+    if x == 0:
+        background(255)
+        fill(255,153,0)
+        textSize(84)
+        text(millis(),61,204)
+        fill(255,191,94)
+        textSize(26)
+        text("milliseconds",81,240)

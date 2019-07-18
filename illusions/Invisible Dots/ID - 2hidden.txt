@@ -1,0 +1,28 @@
+squareSize = 50
+lineSize = 10
+x = lineSize/2
+y = lineSize/2
+r = 0
+p = int(random(0,49))
+
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    noStroke()
+    background(255)
+    
+def draw():
+    global squareSize,lineSize,x,y,r,p
+    while(x < 400):
+        while(y < 400):
+            fill(0, 0, 0)
+            rect(x, y, squareSize-lineSize, squareSize-lineSize)
+            r = r + 1
+            if r == p:
+                fill(0,0,0,30)
+                rect(x-lineSize,y-lineSize,lineSize,lineSize)
+                r = 50
+            y = y + squareSize
+        x = x + squareSize
+        y = lineSize/2
+    

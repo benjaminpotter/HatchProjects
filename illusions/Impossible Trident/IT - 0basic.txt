@@ -1,0 +1,27 @@
+xPos = 180
+yPos = 200
+
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    background (255, 255, 255)
+    stroke(0, 0, 0)
+    strokeWeight(4)
+def draw():
+    line(xPos-143, yPos+45, xPos+84, yPos-128)
+    line(xPos-136, yPos+73, xPos+84, yPos-94)
+    line(xPos-104, yPos+86, xPos+84, yPos-61)
+    line(xPos-94, yPos+113, xPos+138, yPos-66)
+    line(xPos+84, yPos-63, xPos+84, yPos-93)
+    line(xPos+139, yPos-66, xPos+84, yPos-94)
+    line(xPos+113, yPos-49, xPos+84, yPos-61)
+    line(xPos-62, yPos+125, xPos+191, yPos-74)
+    line(xPos+190, yPos-75, xPos+85, yPos-128)
+    line(xPos-55, yPos+153, xPos+198, yPos-42)
+    line(xPos+197, yPos-42, xPos+192, yPos-73)
+    noFill()
+    ellipse(xPos-140, yPos+60, 20, 30)
+    ellipse(xPos-100, yPos+100, 20, 30)
+    ellipse(xPos-60, yPos+140, 20, 30)
+    fill(0, 0, 0)
+    textSize(28)

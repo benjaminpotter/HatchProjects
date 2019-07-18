@@ -1,0 +1,15 @@
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    noStroke()
+r=0
+
+def draw():
+    global r
+    if(r<400):
+        r=r+50
+        fill(0,0,0)
+        rect(r,0,25,400)
+        fill(158,158,158)
+        rect(r,70,25,70)
+        rect(r+25,260,25,70)

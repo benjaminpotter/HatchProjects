@@ -1,0 +1,8 @@
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+    background(255,0,55)
+def draw():
+    quad(190,75,190,375,45,285,45,5)
+    quad(200,75,200,375,355,285,355,5)
+    rect(190,75,10,300)

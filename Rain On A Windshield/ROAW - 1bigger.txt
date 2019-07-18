@@ -1,0 +1,11 @@
+def setup():
+    size(400, 400)
+    colorMode(RGB)
+
+def draw():
+    raindropSize = map(mouseX,0,width,2,180)
+    x=round(random(width))
+    y=round(random(width))
+    fill(56,155,242,50)
+    noStroke()
+    ellipse(x,y,raindropSize,raindropSize)

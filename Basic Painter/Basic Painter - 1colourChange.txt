@@ -1,0 +1,9 @@
+def setup():
+    size(600, 600)
+    colorMode(RGB)
+    noStroke()
+
+
+def draw():
+    fill(62,60,129)
+    ellipse(mouseX,mouseY,10,10)
