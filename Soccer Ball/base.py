@@ -12,7 +12,7 @@ drawBall()
 def drawPatches():
     fill(255, 255, 255)
     translate(200, 200)
-    for i in range(1, 6)
+    for i in range(1, 6):
         rotate(72)
         quad(-25, -35, -25, -95, 25, -95, 25, -35)
         triangle(-24, -35, -24, -95, -46, -65)
