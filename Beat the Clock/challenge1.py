@@ -16,7 +16,7 @@ def gameState():
         textSize(70)
         text(score, 200, 210)
         textSize(20)
-        text(floor((millis() - time) / 1000), 100, 100)
+        text(round((millis() - time) / 1000, 1), 100, 100)
     elif page == "End":
         background(255)
         textSize(50)
@@ -33,11 +33,22 @@ def draw():
     background(0)
     gameState()
     timer()
+    
+def reset():
+    global time, score, page
+    time = millis()
+    score = 0
+    page = "Start"
 
 def mouseClicked(e):
     global time, page, score
     if page == "Start":
         page = "Game"
+        time = millis()
+    elif page == "Game":
+        score += 1
+    elif page == "End":
+        reset()
         time = millis()
     elif page == "Game":
         score += 1
