@@ -1,22 +1,16 @@
-setup()
-chomp_speed = 5
-pac_mouth = 1
-pac_mouth_close = 0
-
-def background():
-   if mouseX < 150 :
-        background(255, 0, 0)
-    elif mouseX < 250 :
-        background(0, 0, 255)
-    else :
-        background(0, 255, 0) 
-
+chompSpeed = 5
+pacMouth = 1
+pacMouthClose = 0
 def draw():
-    background()
-    fill(mouseY, mouseX, mouseY)
-    pac_mouth_close = 360 - pac_mouth
-    arc(200, 200, 80, 80, pac_mouth, pac_mouth_close)
-    if pac_mouth >= 45 or pac_mouth <= 0 :
-        chomp_speed *= -1
+    global pacMouth
+    global pacMouthClose
+    global chompSpeed
+    background(0)
+    fill(mouseX - mouseY, mouseY, mouseX)
+    pacMouthClose = 360 - pacMouth
+    arc(200, 200, 80, 80, pacMouth, pacMouthClose)
+    if pacMouth >= 45 or pacMouth <= 0:
+        chompSpeed *= -1
+    pacMouth += chompSpeed   
 
-pac_mouth += chomp_speed
+        
