@@ -32,7 +32,7 @@ class Button:
     def on_click(self):
         background(random(255), random(255), random(255))
         
-buttons = [Button(100, 100, 60, 20, color(255, 100, 200), 'Click Me')]
+buttons = [Button(100, 100, 60, 20, color(255, 100, 200), 'Click Me'), Button(300, 300, 40, 60, color(255, 0, 60), 'B')]
 
 def draw_buttons():
     for button in buttons:
