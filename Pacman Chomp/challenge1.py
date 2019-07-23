@@ -1,5 +1,3 @@
-def setup():
-      size(400, 400)
 setup()
 chomp_speed = 5
 pac_mouth = 1
