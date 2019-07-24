@@ -1,10 +1,3 @@
-def setup():
-    size(400, 400)
-    textSize(40)
-    fill(120, 60, 60)
-    textAlign(CENTER, CENTER)
-    text(encode("hello world"), 200, 200)
-
 def encode(string):
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     string = string.lower()
@@ -16,3 +9,8 @@ def encode(string):
                 array[i] = alphabet[nextLetter]
                 break
     return "".join(array)
+
+textSize(40)
+fill(120, 60, 60)
+textAlign(CENTER, CENTER)
+text(encode("hello world"), 200, 200)
