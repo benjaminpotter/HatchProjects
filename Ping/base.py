@@ -1,8 +1,5 @@
-def setup():
-    size(400, 400)
-
 drops = []
-class drop:
+class Drop:
 
     def __init__(self, x, y):
         self.x = x
@@ -13,6 +10,8 @@ class drop:
 background(0, 246, 255)
 
 def draw():
+    global drops
+    
     noStroke()
     fill(30, 198, 204, 40)
     rect(0, 0, 400, 400)
@@ -23,5 +22,5 @@ def draw():
         ellipse(drops[i].x, drops[i].y, drops[i].radius, drops[i].radius)
         drops[i].radius += drops[i].speed
 
-def mouseClicked():
-    drops.append(new drop(mouseX, mouseY))
+def mouseClicked(e):
+    drops.append(Drop(mouseX, mouseY))
