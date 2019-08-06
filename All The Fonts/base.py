@@ -1,13 +1,11 @@
-def setup():
-	size(400, 400)
-textAlign(CENTER, CENTER)
 mono = createFont("monospace")
 verdana = createFont('verdana')
 georgia = createFont('georgia')
 comic = createFont('comic sans ms')
-arial_black = createFont('arial black’)
-courier_new = createFont('Courier New')
-def draw_text():
+arialBlack = createFont('arial black’)
+courierNew = createFont('Courier New')
+
+def drawText():
   fill(0)
   textFont(georgia, 30)
   text("Georgia", 200, 20)
