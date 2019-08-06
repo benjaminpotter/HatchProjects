@@ -1,5 +1,5 @@
-topPos = 190
-bottomPos = 220
+topPos = 240
+bottomPos = 260
 
 def drawLines(y) :
    line(100, y, 166, y - 30)
@@ -9,7 +9,7 @@ def drawLines(y) :
 def drawEgg():
    background(0, 118, 165)
    stroke(255)
-   strokeWeight(10)
+   strokeWeight(5)
    noFill()
    arc(200, topPos, 200, 280, 180, 345)
    drawLines(topPos)
