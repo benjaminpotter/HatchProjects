@@ -1,10 +1,10 @@
 def setup():
 	size(400, 400)
 textAlign(CENTER, CENTER)
-mono = createFont("monospace");
-verdana = createFont('verdana');
-georgia = createFont('georgia');
-comic = createFont('comic sans ms');
+mono = createFont("monospace")
+verdana = createFont('verdana')
+georgia = createFont('georgia')
+comic = createFont('comic sans ms')
 arial_black = createFont('arial black’)
 courier_new = createFont('Courier New')
 def draw_text():
