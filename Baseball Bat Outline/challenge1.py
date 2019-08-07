@@ -1,6 +1,6 @@
-background(191, 223, 245);
-noFill();
-strokeWeight(3);
+background(191, 223, 245)
+noFill()
+strokeWeight(3)
 
 def rotateCanvas():
    resetMatrix()
