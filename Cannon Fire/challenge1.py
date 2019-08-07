@@ -1,5 +1,5 @@
 x = 100
-var y = 0
+y = 0
 noStroke()
 
 def drawCannon():
