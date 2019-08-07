@@ -1,0 +1,24 @@
+background(191, 223, 245);
+noFill();
+strokeWeight(3);
+
+def rotateCanvas():
+   resetMatrix()
+   translate(200, 200)
+   rotate(45)
+   translate(-200, -200)
+rotateCanvas()
+
+def drawBat():
+   bezier(190, 420, 200, 250, 160, 200, 160, 0)
+   bezier(210, 420, 200, 250, 240, 200, 240, 0)
+   arc(200, 420, 50, 20, 0, 360)
+   ellipse(200, 0, 80, 25)
+drawBat()
+
+def printText():
+   resetMatrix()
+   fill(0, 0, 0)
+   textSize(25)
+   text("New York Yankees", 20, 90)
+printText()
