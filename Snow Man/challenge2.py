@@ -36,5 +36,5 @@ def draw():
    resetMatrix()
    translate(-100, 0)
    drawSnowman()
-   drawHat();
+   drawHat()
    drawScarf()
