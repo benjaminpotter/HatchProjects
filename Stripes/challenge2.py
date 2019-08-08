@@ -9,5 +9,4 @@ for i in range (0, numBlocks) :
        fill(evenColor)
    else :
        fill(oddColor)
-       rect(0, i*blockWidth, 400, blockWidth)
-   rect(i*blockWidth, 0, blockWidth, 400)
+   rect(0, i*blockWidth, 400, blockWidth)
