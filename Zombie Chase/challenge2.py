@@ -15,10 +15,10 @@ def moveCharacters() :
    if zPos < -50 :
        zPos = 450
   
-   if keyIsPressed && keyCode === RIGHT :
+   if keyIsPressed and keyCode == RIGHT :
        sPos += steveSpeed
   
-   if keyIsPressed && keyCode === LEFT :
+   if keyIsPressed and keyCode == LEFT :
        sPos -= steveSpeed
   
    if sPos > 450 :
