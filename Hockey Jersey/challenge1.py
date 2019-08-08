@@ -26,5 +26,5 @@ def printName():
    textSize(100)
    text(number, 150, 226)
    textSize(30)
-   text(name, width / 2 - name.length * 8, 100)
+   text(name, width / 2 - len(name) * 8, 100)
 printName()
