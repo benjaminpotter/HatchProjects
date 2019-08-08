@@ -1,0 +1,26 @@
+def drawShapes():
+    stroke(150)
+    strokeWeight(2)
+    fill(0)
+    ellipse(200,200,350,350)
+    fill(255)
+    ellipse(200,200,225,225)
+    fill(0,0,200)
+    arc(200,200,222,222,0,90)
+    arc(200,200,222,222,180,270)
+    line(88,200,310,200)
+    line(200,88,200,310)
+def drawLetters():
+    textFont("Helvetica") 
+    textSize(60)
+    fill(245)
+    text("M", 175,78)
+    translate(-45,115)
+    rotate(-50)
+    text("B", 80,121)
+    rotate(97)
+    text("W", 200,-242)
+def draw():
+    drawShapes()
+    drawLetters() 
+
