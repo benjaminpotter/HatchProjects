@@ -6,9 +6,9 @@ def drawCharacter():
    image(img, 200, yPos)
 
 def moveCharacter():
-   if keyPressed and keyCode === UP_ARROW :
+   if keyPressed and keyCode == UP_ARROW :
        yPos = yPos - ySpeed
-   if keyPressed and keyCode === DOWN_ARROW :
+   if keyPressed and keyCode == DOWN_ARROW :
        yPos = yPos + ySpeed
 
 def draw():
