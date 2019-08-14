@@ -1,4 +1,4 @@
-def mouseDragged():
+def mouseDragged(e):
    height = 30
    width = 15
    for i in range (0, 5) :
